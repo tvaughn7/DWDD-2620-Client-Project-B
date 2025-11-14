@@ -49,7 +49,88 @@
     
     <!-- Main Content -->
     <main class="min-h-screen">
-        <!-- Page content will go here -->
+        <!-- Hero Section with CTA -->
+        <section class="relative h-[70vh] min-h-[500px] overflow-hidden" style="background: url('./images/Hero.webp') center/cover no-repeat;">
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-black" style="opacity: 0.3;"></div>
+            
+            <!-- Hero Content with CTA -->
+            <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+                <h2 class="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg">Ride Your Style</h2>
+                <p class="text-xl md:text-2xl text-white mb-8 max-w-2xl drop-shadow-md">Premium skateboards, decks, and gear for every rider</p>
+                <a href="products.html" class="bg-brand-lavender hover:bg-brand-light-blue text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300">
+                    Shop Now
+                </a>
+            </div>
+        </section>
+
+        <!-- 5 Great Things About Our Store -->
+        <section class="py-16 px-4 bg-gradient-to-b from-brand-off-white to-gray-100 border-t-4 border-brand-lavender">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-4xl font-bold text-center text-brand-dark mb-12">Why Choose Streetform?</h2>
+                
+                <div class="space-y-6 text-lg text-gray-800">
+                    <!-- Feature 1 -->
+                    <div class="flex items-start gap-4 pb-6 border-b-2 border-gray-300">
+                        <div class="text-4xl flex-shrink-0">🛹</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-brand-dark mb-2">Premium Quality</h3>
+                            <p>Hand-selected boards and gear from top brands. Every product meets our strict quality standards for durability and performance. We carefully curate our inventory to ensure you're getting authentic, high-quality equipment that will stand up to serious skating. From decks to wheels, trucks to bearings, we stock only the best brands trusted by professional skaters worldwide.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 2 -->
+                    <div class="flex items-start gap-4 pb-6 border-b-2 border-gray-300">
+                        <div class="text-4xl flex-shrink-0">👥</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-brand-dark mb-2">Expert Team</h3>
+                            <p>Our staff are passionate skaters with years of experience. Get personalized advice and recommendations for your skill level. Whether you're picking your first board or upgrading your setup, our team members have the knowledge to guide you. We understand the nuances of different skating styles and can help you find the perfect components to match your riding preferences and goals.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 3 -->
+                    <div class="flex items-start gap-4 pb-6 border-b-2 border-gray-300">
+                        <div class="text-4xl flex-shrink-0">🚚</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-brand-dark mb-2">Fast Shipping</h3>
+                            <p>Quick and reliable delivery with secure packaging. Get your gear fast so you can hit the streets and parks sooner. We process and ship orders within 24 hours, using protective packaging to ensure your equipment arrives in perfect condition. Track your order every step of the way and enjoy free shipping on orders over $75. Your new setup will be ready to ride as soon as it arrives.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 4 -->
+                    <div class="flex items-start gap-4 pb-6 border-b-2 border-gray-300">
+                        <div class="text-4xl flex-shrink-0">🎨</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-brand-dark mb-2">Custom Builds</h3>
+                            <p>Design your perfect setup with our custom build service. Choose every component to match your style and riding preferences. Select your preferred deck size and graphic, pick trucks that match your width, choose wheels for your terrain, and select the bearings that fit your budget. We'll assemble everything professionally and ensure it's ready to ride right out of the box.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 5 -->
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl flex-shrink-0">🤝</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-brand-dark mb-2">Community Support</h3>
+                            <p>We actively support local skate scenes and events. Join our community of riders and be part of something bigger. We sponsor local skaters, fund skatepark improvements, and host regular events and competitions. When you shop with us, you're supporting a business that gives back to the skateboarding community. Follow us on social media to stay updated on upcoming jams, contests, and meetups.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Reviews Section -->
+        <section class="py-16 px-4 bg-brand-slate border-t-4 border-brand-lavender">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-4xl font-bold text-center text-brand-off-white mb-4">What Our Customers Say</h2>
+                <p class="text-center text-brand-off-white text-lg mb-12 max-w-2xl mx-auto">Don't just take our word for it - hear from real skaters who trust Streetform for their gear. We're proud to have built a community of satisfied riders who keep coming back for quality products and exceptional service.</p>
+                
+                <!-- Reviews Container - Responsive Grid -->
+                <!-- 1 column on small, 2 columns on medium, 3 columns on large -->
+                <div id="reviews-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Reviews will be dynamically inserted here by reviews.js -->
+                </div>
+            </div>
+        </section>
     </main>
     
     <!-- Footer -->
@@ -60,5 +141,6 @@
         import { buildFooter } from './modules/footer.mjs';
         buildFooter();
     </script>
+    <script type="module" src="./js/reviews.js"></script>
 </body>
 </html>
