@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Streetform Color Scheme */
+:root {
+    --color-dark: #000807;
+    --color-slate: #A2A3BB;
+    --color-lavender: #9395D3;
+    --color-light-blue: #B3B7EE;
+    --color-off-white: #FBF9FF;
+}
+
+@theme {
+    --color-brand-dark: #000807;
+    --color-brand-slate: #A2A3BB;
+    --color-brand-lavender: #9395D3;
+    --color-brand-light-blue: #B3B7EE;
+    --color-brand-off-white: #FBF9FF;
+}
+
+/* Navigation Link Styles */
+.navLink {
+    @apply block py-2 px-4 text-brand-off-white hover:text-brand-lavender transition-colors duration-300 rounded;
+}
+
+.navLink.active {
+    @apply bg-brand-lavender text-brand-dark font-semibold;
+}
+
+/* Hamburger to X Animation */
+#hamburger span {
+    transform-origin: center;
+}
+
+#hamburger.active span:nth-child(1) {
+    transform:  translateY(6px) rotate(45deg);
+}
+
+#hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg) ;
+}

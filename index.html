@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <title>Streetform - Skateboarding</title>
+</head>
+<body class="bg-brand-off-white">
+    <!-- Header -->
+    <header class="bg-brand-dark text-brand-off-white py-6 px-8 relative">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-between">
+                <!-- Logo and Company Name -->
+                <div class="flex items-center gap-4">
+                    <img src="./images/Asset 1.svg" alt="Streetform Logo" class="h-16 w-16">
+                    <h1 class="text-4xl font-bold tracking-wide">STREETFORM</h1>
+                </div>
+                
+                <!-- Navigation (Desktop) -->
+                <nav class="hidden md:block">
+                    <ul class="flex gap-8 text-lg">
+                        <li><a href="index.html" class="navLink active">Home</a></li>
+                        <li><a href="products.html" class="navLink">Products</a></li>
+                        <li><a href="order.html" class="navLink">Order</a></li>
+                        <li><a href="profile.html" class="navLink">Profile</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hamburger Button (Mobile) - Below Header -->
+    <button id="hamburger" class="md:hidden absolute top-28 right-4 z-50 flex flex-col gap-1.5 w-10 h-10 justify-center items-center bg-brand-lavender shadow-lg" aria-label="Toggle menu">
+        <span class="block w-6 h-0.5 bg-brand-off-white transition-all"></span>
+        <span class="block w-6 h-0.5 bg-brand-off-white transition-all"></span>
+        <span class="block w-6 h-0.5 bg-brand-off-white transition-all"></span>
+    </button>
+    
+    <!-- Navigation (Mobile) - Slide from Right -->
+    <nav id="mainNav" class="fixed top-0 right-0 h-full w-64 bg-brand-lavender transform translate-x-full transition-transform duration-300 ease-in-out z-40 md:hidden">
+        <ul class="flex flex-col gap-4 text-lg p-8 pt-32">
+            <li><a href="index.html" class="navLink active">Home</a></li>
+            <li><a href="products.html" class="navLink">Products</a></li>
+            <li><a href="order.html" class="navLink">Order</a></li>
+            <li><a href="profile.html" class="navLink">Profile</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="min-h-screen">
+        <!-- Page content will go here -->
+    </main>
+    
+    <!-- Footer -->
+    <footer></footer>
+    
+    <script src="./js/scripts.js"></script>
+    <script type="module">
+        import { buildFooter } from './modules/footer.mjs';
+        buildFooter();
+    </script>
+</body>
+</html>
